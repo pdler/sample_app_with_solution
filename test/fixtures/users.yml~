@@ -1,0 +1,38 @@
+oliver:
+  name: Oliver
+  email: oliver.hanssen@gmail.com
+  password_digest: <%= User.digest('deathman') %>
+  admin: true
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+max:
+  name: Max Mustermann
+  email: max@muster.com
+  password_digest: <%= User.digest('deathman') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+sabi:
+  name: Sabine Test
+  email: SabineTest@gmx.se
+  password_digest: <%= User.digest('idontknow') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+mrwho:
+  name: Manwithout Identify
+  email: jojojo@okok.de
+  password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  name:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@times.com" %>
+  password_digest: <%= User.digest('password') %>
+  
+<% end %>
+
+

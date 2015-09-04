@@ -1,0 +1,29 @@
+
+############
+def string_shuffle(s)
+  s.split('').shuffle.join
+end
+
+############
+class String
+  def shuffle
+    self.split('').shuffle.join
+  end
+end
+
+############
+person = {}
+
+person[:father] = {first: "Max", last: "Mustermann"}
+
+person[:mother] = {first: "Sabine", last: "Musterfrau"}
+
+person[:child] = {first: "Robocop", last: "Musterkind"}
+
+############
+
+{ "a" => 100, "b" => 200 }.merge({ "b" => 300 })
+
+Output: {"a"=>100, "b"=>300}
+
+If we merge some hashes and if the key are the same, so the old value will be overwritten by the new value
